@@ -20,10 +20,10 @@ public class FormationTemplates {
     graph.addVertex(G2);
     graph.addVertex(G3);
     graph.addVertex(G4);
-    graph.addEdge(B1, G1, new HandConnection(B1, G1));
-    graph.addEdge(B2, G2, new HandConnection(B2, G2));
-    graph.addEdge(B3, G3, new HandConnection(B3, G3));
-    graph.addEdge(B4, G4, new HandConnection(B4, G4));
+    graph.addEdge(B1, G1, new CoupleHandConnection());
+    graph.addEdge(B2, G2, new CoupleHandConnection());
+    graph.addEdge(B3, G3, new CoupleHandConnection());
+    graph.addEdge(B4, G4, new CoupleHandConnection());
     graph.addEdge(B1, G4, new ViewConnection(B1, G4));
     graph.addEdge(G2, B4, new ViewConnection(G2, B4));
     graph.addEdge(B2, G3, new ViewConnection(B2, G3));
