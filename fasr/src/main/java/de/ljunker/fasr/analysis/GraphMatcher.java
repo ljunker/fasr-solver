@@ -1,6 +1,6 @@
 package de.ljunker.fasr.analysis;
 
-import de.ljunker.fasr.model.Connection;
+import de.ljunker.fasr.model.connection.Connection;
 import de.ljunker.fasr.model.Dancer;
 import de.ljunker.fasr.model.FasrGraph;
 import java.util.Comparator;
@@ -16,7 +16,7 @@ public class GraphMatcher {
   }
 
   private static Comparator<Dancer> nodeMatcher() {
-    return Comparator.comparing(o -> o.facing);
+    return Comparator.comparing(o -> o.getClass().getSimpleName());
   }
 
   private static Comparator<Connection> edgeMatcher() {

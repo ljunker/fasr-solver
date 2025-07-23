@@ -1,4 +1,4 @@
-package de.ljunker.fasr.model;
+package de.ljunker.fasr.model.connection;
 
 public abstract class HandConnection extends Connection {
 }

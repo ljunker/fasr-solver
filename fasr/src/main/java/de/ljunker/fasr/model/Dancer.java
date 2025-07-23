@@ -2,16 +2,13 @@ package de.ljunker.fasr.model;
 
 public class Dancer {
   public enum Gender {BOY, GIRL}
-  public enum Direction {NORTH, SOUTH, EAST, WEST}
 
   public final String name;
   public final Gender gender;
-  public final Direction facing;
 
-  public Dancer(String name, Gender gender, Direction facing) {
+  public Dancer(String name, Gender gender) {
     this.name = name;
     this.gender = gender;
-    this.facing = facing;
   }
 
   @Override
