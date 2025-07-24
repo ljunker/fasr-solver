@@ -4,7 +4,7 @@ import de.ljunker.fasr.model.Dancer;
 import java.util.HashSet;
 import java.util.Set;
 
-public class FacingDancerViewConnection extends ViewConnection {
+public class FacingDancerViewConnection implements ViewConnection {
 
   private final Set<Dancer> dancers = new HashSet<>();
 
