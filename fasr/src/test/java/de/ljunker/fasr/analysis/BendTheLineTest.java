@@ -1,6 +1,7 @@
 package de.ljunker.fasr.analysis;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import de.ljunker.fasr.calls.BendTheLine;
 import de.ljunker.fasr.model.Fasr;
 import de.ljunker.fasr.model.FasrGraph;
 import de.ljunker.fasr.model.FormationTemplates;
@@ -13,8 +14,9 @@ public class BendTheLineTest {
     FasrGraph graph = FormationTemplates.RightHandedTwoFacedLines();
     Fasr lines = new Fasr(graph);
 
-    lines.apply(BendTheLine());
+    lines.apply(new BendTheLine());
 
     assertTrue(GraphMatcher.isIsomorphic(lines.getGraph(), FormationTemplates.Lines()));
   }
+
 }
