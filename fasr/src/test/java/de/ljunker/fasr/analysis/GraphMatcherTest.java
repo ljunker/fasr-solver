@@ -1,9 +1,11 @@
 package de.ljunker.fasr.analysis;
 
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import de.ljunker.fasr.model.Dancer;
 import de.ljunker.fasr.model.FasrGraph;
 import de.ljunker.fasr.model.FormationTemplates;
+import java.text.Normalizer;
 import org.junit.jupiter.api.Test;
 
 class GraphMatcherTest {
@@ -16,8 +18,12 @@ class GraphMatcherTest {
     assertTrue(GraphMatcher.isIsomorphic(graph1, graph2));
   }
 
-  private static Dancer getDancer(FasrGraph graph1, String name) {
-    return graph1.vertexSet().stream().filter(d -> d.name.equals(name)).findFirst().get();
+  @Test
+  void linesNotIsomorphToEightChain() {
+    FasrGraph lines = FormationTemplates.Lines();
+    FasrGraph eightChain = FormationTemplates.EightChain();
+
+    assertFalse(GraphMatcher.isIsomorphic(lines, eightChain));
   }
 
 }
