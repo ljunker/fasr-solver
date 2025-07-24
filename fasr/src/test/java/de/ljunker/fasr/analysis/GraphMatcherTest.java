@@ -2,10 +2,8 @@ package de.ljunker.fasr.analysis;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import de.ljunker.fasr.model.Dancer;
 import de.ljunker.fasr.model.FasrGraph;
 import de.ljunker.fasr.model.FormationTemplates;
-import java.text.Normalizer;
 import org.junit.jupiter.api.Test;
 
 class GraphMatcherTest {
