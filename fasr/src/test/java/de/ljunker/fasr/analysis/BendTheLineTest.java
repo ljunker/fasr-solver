@@ -13,7 +13,7 @@ public class BendTheLineTest {
     FasrTestBuilder
         .starting()
         .fromFormation(FormationTemplates.RightHandedTwoFacedLines())
-        .applying(CallFactory.bendTheLine())
+        .applying(CallFactory.fromString("Bend The Line"))
         .expectingFormation(FormationTemplates.Lines())
         .shouldMatch();
   }
