@@ -1,4 +1,4 @@
 package de.ljunker.fasr.model.connection;
 
-public abstract class ViewConnection extends Connection {
+public interface ViewConnection extends Connection {
 }
