@@ -1,4 +1,4 @@
 package de.ljunker.fasr.model.connection;
 
-public interface HandConnection extends Connection {
+public class HandConnection<S extends Hand, T extends Hand> implements Connection {
 }

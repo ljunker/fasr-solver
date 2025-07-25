@@ -1,22 +1,21 @@
 package de.ljunker.fasr.analysis;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
-import de.ljunker.fasr.calls.BendTheLine;
-import de.ljunker.fasr.model.Fasr;
-import de.ljunker.fasr.model.FasrGraph;
+import de.ljunker.fasr.FasrTestBuilder;
+import de.ljunker.fasr.calls.CallFactory;
+import de.ljunker.fasr.calls.exceptions.InvalidCallException;
 import de.ljunker.fasr.model.FormationTemplates;
 import org.junit.jupiter.api.Test;
 
 public class BendTheLineTest {
 
   @Test
-  void fromRightHandedTwoFacedLinesToLines() {
-    FasrGraph graph = FormationTemplates.RightHandedTwoFacedLines();
-    Fasr lines = new Fasr(graph);
-
-    lines.apply(new BendTheLine());
-
-    assertTrue(GraphMatcher.isIsomorphic(lines.getGraph(), FormationTemplates.Lines()));
+  void fromRightHandedTwoFacedLinesToLines() throws InvalidCallException {
+    FasrTestBuilder
+        .starting()
+        .fromFormation(FormationTemplates.RightHandedTwoFacedLines())
+        .applying(CallFactory.bendTheLine())
+        .expectingFormation(FormationTemplates.Lines())
+        .shouldMatch();
   }
 
 }
