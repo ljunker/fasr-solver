@@ -5,7 +5,7 @@ import de.ljunker.fasr.calls.exceptions.InvalidCallException;
 import de.ljunker.fasr.model.FasrGraph;
 import de.ljunker.fasr.model.FormationTemplates;
 
-public class BendTheLineStrategy implements TransformationStrategy {
+public class BendTheLineStrategy implements CallStrategy {
   @Override
   public FasrGraph transform(FasrGraph input) throws InvalidCallException {
     if (!canTransform(input)) {
