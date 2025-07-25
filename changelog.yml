@@ -1,0 +1,246 @@
+- semver: 0.1.0
+  date: 2025-07-25T13:35:46+02:00
+  packager: Lars Junker <larsjunker92@gmail.com>
+  changes:
+    - commit: 57e22131ce3ffb7b20d10fdb4e335124e7043816
+      note: Merge branch 'release/0.1'
+      author:
+        name: Lars Junker
+        email: larsjunker92@gmail.com
+      committer:
+        name: Lars Junker
+        email: larsjunker92@gmail.com
+    - commit: 44026008c964c085009d4c57212f663ddf211b67
+      note: 'chore: bump release version'
+      author:
+        name: Lars Junker
+        email: larsjunker92@gmail.com
+      committer:
+        name: Lars Junker
+        email: larsjunker92@gmail.com
+    - commit: 968090e0deaa7e0366ff631399d0f0b6d985243f
+      note: |-
+        Merge branch 'feature/bend-the-line-from-lines' into develop
+        implemented bend the line from right handed two faced lines
+      author:
+        name: Lars Junker
+        email: larsjunker92@gmail.com
+      committer:
+        name: Lars Junker
+        email: larsjunker92@gmail.com
+    - commit: a5b71a800becc013ef3d7289b34c9c860c680ed3
+      note: |-
+        refactor: enhance connection classes and update BendTheLine logic
+
+        - Refactored connection classes to include additional properties and `toString` methods for debug clarity.
+        - Adjusted `FormationTemplates` to use updated `HandConnection` constructor with specific dancer and hand types.
+        - Enhanced `BendTheLineStrategy` with detailed line processing and robust validation.
+        - Improved debugging in `FasrTestBuilder` to print graph details on mismatch.
+      author:
+        name: Lars Junker
+        email: larsjunker92@gmail.com
+      committer:
+        name: Lars Junker
+        email: larsjunker92@gmail.com
+    - commit: 3179f4bdfefea3d86ace52f18c4d672e36732cf9
+      note: |-
+        feat: add support for call modifiers and update Call structure
+
+        - Added `Modifier` enum to represent call modifiers.
+        - Refactored `Call` to a class to support modifiers and new behavior.
+        - Enhanced `BendTheLine` with modifiers support and a fluent API for modifier application.
+        - Introduced `CallFactory.fromString` method to create calls with modifiers from input.
+        - Updated Maven configuration to Java 24 with UTF-8 encoding.
+        - Adjusted tests to use `CallFactory.fromString` for calls.
+      author:
+        name: Lars Junker
+        email: larsjunker92@gmail.com
+      committer:
+        name: Lars Junker
+        email: larsjunker92@gmail.com
+    - commit: a11d0c62a92fb11eb1f3e309db423ae25851d5bd
+      note: 'gitignore: add fasr.plantuml to ignored files'
+      author:
+        name: Lars Junker
+        email: larsjunker92@gmail.com
+      committer:
+        name: Lars Junker
+        email: larsjunker92@gmail.com
+    - commit: 33aef1ebbb5c395973a17b18f2b16e5d07a00612
+      note: |-
+        refactor: rename TransformationStrategy to CallStrategy for consistency
+
+        - Updated `BendTheLineStrategy` and interface name to align with updated terminology.
+      author:
+        name: Lars Junker
+        email: larsjunker92@gmail.com
+      committer:
+        name: Lars Junker
+        email: larsjunker92@gmail.com
+    - commit: 9bd5799c510960ea70c14af7cbc247893b6e8227
+      note: |-
+        refactor: replace specific hand connections with generic HandConnection and improve exception handling
+
+        - Removed `CoupleHandConnection`, `LeftWaveHandConnection`, and `RightWaveHandConnection` classes.
+        - Introduced `HandConnection` with generics to handle versatility between hands.
+        - Added `LeftHand`, `RightHand`, and `Hand` interfaces for better abstraction.
+        - Updated `FormationTemplates` to use `HandConnection`.
+        - Enhanced `BendTheLine` call with `InvalidCallException` for validation.
+        - Refactored `BendTheLineTest` using `FasrTestBuilder` for cleaner test logic.
+      author:
+        name: Lars Junker
+        email: larsjunker92@gmail.com
+      committer:
+        name: Lars Junker
+        email: larsjunker92@gmail.com
+    - commit: 1e5a7d41ce994012dc8057ff54c761265ba1fd4b
+      note: |-
+        refactor: convert connection classes to interfaces for improved polymorphism
+
+        - Updated `Connection`, `ViewConnection`, and `HandConnection` to be interfaces.
+        - Adjusted referencing classes to implement corresponding interfaces.
+      author:
+        name: Lars Junker
+        email: larsjunker92@gmail.com
+      committer:
+        name: Lars Junker
+        email: larsjunker92@gmail.com
+    - commit: d9f72be2f4a5d5b0d009c2b47304fabf4dd45a3c
+      note: |-
+        feat: introduce BendTheLine call and RightHandedTwoFacedLines formation template
+
+        - Added `BendTheLine` call implementation.
+        - Introduced `RightHandedTwoFacedLines` formation in `FormationTemplates`.
+        - Created `FaceToBackViewConnection` for dancer relationships.
+        - Updated `BendTheLineTest` to verify new formation and call behavior.
+      author:
+        name: Lars Junker
+        email: larsjunker92@gmail.com
+      committer:
+        name: Lars Junker
+        email: larsjunker92@gmail.com
+    - commit: 384805f79d7b864a1d648fd3bc0e1050804d3919
+      note: |-
+        feat: add BendTheLineTest for graph transformation validation
+
+        - Introduced `BendTheLineTest` to validate graph transformation using isomorphism checks.
+        - Ensures `RightHandedTwoFacedLines` transforms correctly into `Lines`.
+      author:
+        name: Lars Junker
+        email: larsjunker92@gmail.com
+      committer:
+        name: Lars Junker
+        email: larsjunker92@gmail.com
+    - commit: 78a1de247e93a7532e6fa87947e5617124d9b334
+      note: gitignore
+      author:
+        name: Lars Junker
+        email: larsjunker92@gmail.com
+      committer:
+        name: Lars Junker
+        email: larsjunker92@gmail.com
+    - commit: 5d374c6709250ee94e7437c63d7e86f8da0f280d
+      note: 'refactor: remove unused imports in BackToBackViewConnection and GraphMatcherTest'
+      author:
+        name: Lars Junker
+        email: larsjunker92@gmail.com
+      committer:
+        name: Lars Junker
+        email: larsjunker92@gmail.com
+    - commit: 24d1f3adb561c872231df8037dbde8f239dd77fd
+      note: |-
+        feat: add EightChain formation template and BackToBackViewConnection
+
+        - Introduced `EightChain` formation in `FormationTemplates`.
+        - Added `BackToBackViewConnection` class for dancer relationships.
+        - Updated `GraphMatcherTest` with a new isomorphism test for `EightChain`.
+      author:
+        name: Lars Junker
+        email: larsjunker92@gmail.com
+      committer:
+        name: Lars Junker
+        email: larsjunker92@gmail.com
+    - commit: 814d0833b150a2b3c15f869ee0e1406fa19664d8
+      note: 'docs: add initial README with project title'
+      author:
+        name: Lars Junker
+        email: larsjunker92@gmail.com
+      committer:
+        name: Lars Junker
+        email: larsjunker92@gmail.com
+    - commit: eb9933c244a315a65befcab50602afd8466fcbb4
+      note: |-
+        Merge pull request #2 from ljunker/lines-template
+
+        feat: add new formation templates and unit test for graph isomorphism
+      author:
+        name: Lars Junker
+        email: larsjunker92@gmail.com
+      committer:
+        name: GitHub
+        email: noreply@github.com
+    - commit: 3342a7999c342b476f5820f3ef172cf92eec7765
+      note: |-
+        feat: add new formation templates and unit test for graph isomorphism
+
+        - Added `LinesTwoCouplesTraded` formation in `FormationTemplates`.
+        - Updated connections in `Lines` formation.
+        - Introduced `junit-jupiter` library for testing in `pom.xml`.
+        - Created `GraphMatcherTest` for verifying graph isomorphism.
+      author:
+        name: Lars Junker
+        email: larsjunker92@gmail.com
+      committer:
+        name: Lars Junker
+        email: larsjunker92@gmail.com
+    - commit: c3691b4fe196d9f06478ae1f787c8c55efecb66f
+      note: |-
+        Merge pull request #1 from ljunker/project-structure
+
+        feat: project structure
+      author:
+        name: Lars Junker
+        email: larsjunker92@gmail.com
+      committer:
+        name: GitHub
+        email: noreply@github.com
+    - commit: dac19e2f18f9b30261e4ef8547e9a010fa45a879
+      note: 'refactor: move connection classes to dedicated package and adapt related code'
+      author:
+        name: Lars Junker
+        email: larsjunker92@gmail.com
+      committer:
+        name: Lars Junker
+        email: larsjunker92@gmail.com
+    - commit: 9855c1e787d7762d86977a489e5730fd227068a8
+      note: 'refactor: introduce specific HandConnection types and update usages in FormationTemplates'
+      author:
+        name: Lars Junker
+        email: larsjunker92@gmail.com
+      committer:
+        name: Lars Junker
+        email: larsjunker92@gmail.com
+    - commit: bd4eaa55acc5e5054f20dca13c6e6ffe25c2132b
+      note: 'refactor: replace Formation with Fasr model and introduce connection types'
+      author:
+        name: Lars Junker
+        email: larsjunker92@gmail.com
+      committer:
+        name: Lars Junker
+        email: larsjunker92@gmail.com
+    - commit: 5ee2a7f2338ba5a969f85c122263f1dc247f1c6b
+      note: 'feat: project structure'
+      author:
+        name: Lars Junker
+        email: larsjunker92@gmail.com
+      committer:
+        name: Lars Junker
+        email: larsjunker92@gmail.com
+    - commit: 372e38be94d01638d22472b6ca63a689f1c9376c
+      note: gitignore
+      author:
+        name: Lars Junker
+        email: larsjunker92@gmail.com
+      committer:
+        name: Lars Junker
+        email: larsjunker92@gmail.com
