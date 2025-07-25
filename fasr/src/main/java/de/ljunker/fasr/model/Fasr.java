@@ -2,6 +2,7 @@ package de.ljunker.fasr.model;
 
 import de.ljunker.fasr.analysis.GraphMatcher;
 import de.ljunker.fasr.calls.Call;
+import de.ljunker.fasr.calls.exceptions.InvalidCallException;
 
 public class Fasr {
   private final FasrGraph graph;
@@ -14,7 +15,7 @@ public class Fasr {
     return graph;
   }
 
-  public Fasr apply(Call call) {
+  public Fasr apply(Call call) throws InvalidCallException {
     return call.apply(this);
   }
 
