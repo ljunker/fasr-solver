@@ -21,7 +21,7 @@ public class CallFactory {
             try {
                 modifiers.add(Modifier.valueOf(part.toUpperCase()));
             } catch (IllegalArgumentException e) {
-                if (callNameBuilder.length() > 0) {
+                if (!callNameBuilder.isEmpty()) {
                     callNameBuilder.append(" ");
                 }
                 callNameBuilder.append(part);

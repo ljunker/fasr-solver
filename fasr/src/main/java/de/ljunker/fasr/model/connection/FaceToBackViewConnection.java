@@ -6,13 +6,30 @@ import java.util.Set;
 
 public class FaceToBackViewConnection implements ViewConnection {
   private final Set<Dancer> dancers = new HashSet<>();
+  private final Dancer dancerFacingIn;
+  private final Dancer dancerFacingOut;
 
-  public FaceToBackViewConnection(Dancer d1, Dancer d2) {
-    dancers.add(d1);
-    dancers.add(d2);
+  public FaceToBackViewConnection(Dancer dancerFacingIn, Dancer dancerFacingOut) {
+    dancers.add(dancerFacingIn);
+    dancers.add(dancerFacingOut);
+    this.dancerFacingIn = dancerFacingIn;
+    this.dancerFacingOut = dancerFacingOut;
   }
 
   public Set<Dancer> getDancers() {
     return dancers;
+  }
+
+  @Override
+  public String toString() {
+    return "FaceToBackViewConnection{" + dancers + "}";
+  }
+
+  public Dancer getDancerFacingIn() {
+    return dancerFacingIn;
+  }
+
+  public Dancer getDancerFacingOut() {
+    return dancerFacingOut;
   }
 }

@@ -16,4 +16,9 @@ public class FacingDancerViewConnection implements ViewConnection {
   public Set<Dancer> getDancers() {
     return dancers;
   }
+
+  @Override
+  public String toString() {
+    return "FacingDancerViewConnection{" + dancers + "}";
+  }
 }

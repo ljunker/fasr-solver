@@ -36,6 +36,19 @@ public class FasrTestBuilder {
 
   public void shouldMatch() throws InvalidCallException {
     Fasr result = initialFasr.apply(call);
-    assertTrue(result.matches(Fasr.fromGraph(expectedGraph)));
+    boolean match = result.matches(Fasr.fromGraph(expectedGraph));
+    if (!match) {
+      System.out.println("=== Graph Diff Debug ===");
+      System.out.println("--- Result Vertices ---");
+      System.out.println(result.getGraph().vertexSet());
+      System.out.println("--- Result Edges ---");
+      System.out.println(result.getGraph().edgeSet());
+      System.out.println("--- Expected Vertices ---");
+      System.out.println(expectedGraph.vertexSet());
+      System.out.println("--- Expected Edges ---");
+      System.out.println(expectedGraph.edgeSet());
+      System.out.println("=======================");
+    }
+    assertTrue(match);
   }
 }

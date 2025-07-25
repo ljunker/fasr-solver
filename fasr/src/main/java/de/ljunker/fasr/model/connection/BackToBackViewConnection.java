@@ -15,4 +15,9 @@ public class BackToBackViewConnection implements ViewConnection {
   public Set<Dancer> getDancers() {
     return dancers;
   }
+
+  @Override
+  public String toString() {
+    return "BackToBackViewConnection{" + dancers + "}";
+  }
 }
